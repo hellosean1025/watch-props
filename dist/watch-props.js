@@ -1,1 +1,265 @@
-!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e(require("react")):"function"==typeof define&&define.amd?define(["react"],e):"object"==typeof exports?exports.watchProps=e(require("react")):t.watchProps=e(t.React)}(window,function(t){return function(t){var e={};function n(o){if(e[o])return e[o].exports;var r=e[o]={i:o,l:!1,exports:{}};return t[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}return n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)n.d(o,r,function(e){return t[e]}.bind(null,r));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=1)}([function(e,n){e.exports=t},function(t,e,n){"use strict";n.r(e),n.d(e,"default",function(){return a});var o=n(0),r=n.n(o),c=function(){function t(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}return function(e,n,o){return n&&t(e.prototype,n),o&&t(e,o),e}}(),i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};function u(t){t.prototype.componentDidUpdate=function(t){var e=this,n=this.state.__watchState,o=this.state.__watchObject;o&&n&&Object.keys(o).forEach(function(r){n[r]!==t[r]&&o[r]&&"function"==typeof o[r]&&o[r].call(e.child,n[r],t[r])})},t.getDerivedStateFromProps=function(t,e){var n=function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=t.__watchObject;if(n&&"object"===(void 0===n?"undefined":i(n))){var o={};return Object.keys(n).forEach(function(t){o[t]=e[t]}),o}}(e,t),o=e.__watchObject;return n&&o?e.__watchState&&function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=Object.keys(t);for(var o in n){var r=n[o];if(t[r]!==e[r])return!1}return!0}(n,e.__watchState)?null:{__watchState:n}:null}}function a(t){var e=function(e){function n(t){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,n);var e=function(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}(this,(n.__proto__||Object.getPrototypeOf(n)).call(this,t));return e.state={},e}return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}(n,r.a.PureComponent),c(n,[{key:"componentDidMount",value:function(){var t=this.child.watch;t&&("function"==typeof t?this.setState({__watchObject:t.call(this.child)}):"object"===(void 0===t?"undefined":i(t))&&this.setState({__watchObject:t}))}},{key:"render",value:function(){var e=this;return r.a.createElement(t,Object.assign({ref:function(t){return e.child=t}},this.props))}}]),n}();return!function(){var t=r.a.version.split(".");return t[0]>16||16==t[0]&&t[1]>=3}()?function(t){t.prototype.componentWillReceiveProps=function(t){var e=this;if(this.state.__watchObject){var n=this.state.__watchObject;Object.keys(n).forEach(function(o){e.props[o]!==t[o]&&n[o].call(e.child,t[o],e.props[o])})}}}(e):u(e),e}}])});
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("react"));
+	else if(typeof define === 'function' && define.amd)
+		define(["react"], factory);
+	else if(typeof exports === 'object')
+		exports["watchProps"] = factory(require("react"));
+	else
+		root["watchProps"] = factory(root["React"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE__0__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return WatchComponentCreator; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+function getParams(state) {
+  var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  var watch = state.__watchObject;
+  if (watch && (typeof watch === 'undefined' ? 'undefined' : _typeof(watch)) === 'object') {
+    var params = {};
+    Object.keys(watch).forEach(function (key) {
+      params[key] = props[key];
+    });
+    return params;
+  }
+}
+
+function shallowEqual() {
+  var data1 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var data2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  var keys = Object.keys(data1);
+  for (var i in keys) {
+    var key = keys[i];
+    if (data1[key] !== data2[key]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function checkReactGt163() {
+  var versions = react__WEBPACK_IMPORTED_MODULE_0___default.a.version.split('.');
+  if (versions[0] > 16) return true;
+  if (versions[0] == 16 && versions[1] >= 3) {
+    return true;
+  }
+  return false;
+}
+
+function handleReactGt163(WatchComponent) {
+  WatchComponent.prototype.componentDidUpdate = function (prevProps) {
+    var _this = this;
+
+    var params = this.state.__watchState;
+    var watchObject = this.state.__watchObject;
+    if (!watchObject || !params) {
+      return;
+    }
+    Object.keys(watchObject).forEach(function (key) {
+      if (params[key] !== prevProps[key]) {
+        if (watchObject[key] && typeof watchObject[key] === 'function') {
+          watchObject[key].call(_this.child, params[key], prevProps[key]);
+        }
+      }
+    });
+  };
+
+  WatchComponent.getDerivedStateFromProps = function (nextProps, prevState) {
+    var params = getParams(prevState, nextProps);
+    var __watchObject = prevState.__watchObject;
+    if (!params || !__watchObject) {
+      return null;
+    }
+    if (!prevState.__watchState) {
+      return {
+        __watchState: params
+      };
+    } else if (!shallowEqual(params, prevState.__watchState)) {
+      return {
+        __watchState: params
+      };
+    }
+    return null;
+  };
+}
+
+function handleReactLt163(WatchComponent) {
+  WatchComponent.prototype.componentWillReceiveProps = function (nextProps) {
+    var _this2 = this;
+
+    if (!this.state.__watchObject) return;
+    var watchObject = this.state.__watchObject;
+    Object.keys(watchObject).forEach(function (key) {
+      if (_this2.props[key] !== nextProps[key]) {
+        watchObject[key].call(_this2.child, nextProps[key], _this2.props[key]);
+      }
+    });
+  };
+}
+
+function WatchComponentCreator(WrappedComponent) {
+  var WatchComponent = function (_React$PureComponent) {
+    _inherits(WatchComponent, _React$PureComponent);
+
+    function WatchComponent(props) {
+      _classCallCheck(this, WatchComponent);
+
+      var _this3 = _possibleConstructorReturn(this, (WatchComponent.__proto__ || Object.getPrototypeOf(WatchComponent)).call(this, props));
+
+      _this3.state = {};
+      return _this3;
+    }
+
+    _createClass(WatchComponent, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        var watch = this.child.watch;
+        if (watch) {
+          if (typeof watch === 'function') {
+            this.setState({
+              __watchObject: watch.call(this.child)
+            });
+          } else if ((typeof watch === 'undefined' ? 'undefined' : _typeof(watch)) === 'object') {
+            this.setState({
+              __watchObject: watch
+            });
+          }
+        }
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _this4 = this;
+
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(WrappedComponent, Object.assign({ ref: function ref(child) {
+            return _this4.child = child;
+          } }, this.props));
+      }
+    }]);
+
+    return WatchComponent;
+  }(react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponent);
+
+  if (checkReactGt163()) {
+    handleReactGt163(WatchComponent);
+  } else {
+    handleReactLt163(WatchComponent);
+  }
+
+  return WatchComponent;
+}
+
+/***/ })
+/******/ ]);
+});
