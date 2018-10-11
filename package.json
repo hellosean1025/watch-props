@@ -9,7 +9,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js",
     "test": "NODE_ENV=test ava --verbose",
-    "prepublish": "npm run test"
+    "prepublish": "npm run test && npm run build"
   },
   "pre-commit": [
     "test"
