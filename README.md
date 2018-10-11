@@ -1,10 +1,10 @@
 # watch-props
-一个高阶组件，给 react 组件增加 watch props 特性，目前仅支持 React >= 16.3
+A higher-order component that adds watch props features to the react component
 
-### 安装
+### Install
 npm i --save watch-props
 
-### 使用
+### Usage
 
 ```js
 import React from 'react'
@@ -13,7 +13,6 @@ import watchProps from 'watch-props'
 @watchProps
 class App extends React.Component{
   watch={
-     //监听组件prop `id` 的变化，执行绑定的 function
      id: function(newValue, oldValue){
         console.log(newValue, oldValue) //print "100, 1"
      }
