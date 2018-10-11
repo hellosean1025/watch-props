@@ -13,6 +13,7 @@ import watchProps from 'watch-props'
 @watchProps
 class App extends React.Component{
   watch={
+     //监听组件prop `id` 的变化，执行绑定的 function
      id: function(newValue, oldValue){
         console.log(newValue, oldValue) //print "100, 1"
      }
