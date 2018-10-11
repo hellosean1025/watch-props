@@ -8,9 +8,12 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "test": "NODE_ENV=test ava --verbose"
+    "test": "NODE_ENV=test ava --verbose",
+    "prepublish": "npm run test"
   },
-  "pre-commit": ["test"],
+  "pre-commit": [
+    "test"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -30,6 +33,7 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "jsdom": "^7.2.2",
     "pre-commit": "^1.2.2",
+    "prepublish": "^2.2.0",
     "prop-types": "^15.6.2",
     "raf": "^3.4.0",
     "webpack": "^4.20.2",
