@@ -1,5 +1,5 @@
 import test from 'ava'
-import watchProps from '../src/index'
+import watchProps from '../dist/watch-props'
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -7,7 +7,6 @@ import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
-
 
 test.cb('Test React 16 watchProps',  t=>{
   let num = 0;

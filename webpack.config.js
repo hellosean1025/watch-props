@@ -16,7 +16,9 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'watch-props.js',
-    path: path.resolve (__dirname, 'dist')
+    path: path.resolve (__dirname, 'dist'),
+    libraryTarget: "umd",
+    library: ['watchProps'],
   },
   externals: [
     { react: { commonjs: "react", commonjs2: "react",amd: 'react', root: ['React'] } },
